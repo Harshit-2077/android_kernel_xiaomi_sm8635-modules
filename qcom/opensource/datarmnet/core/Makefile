@@ -44,6 +44,8 @@ KBUILD_EXTRA_SYMBOLS := \
     $(M)/../../datarmnet-ext/mem/Module.symvers \
     $(M)/../../dataipa/drivers/platform/msm/Module.symvers
 
+KBUILD_OPTIONS += KBUILD_EXTRA_SYMBOLS="$(KBUILD_EXTRA_SYMBOLS)"
+
 all:
 	$(MAKE) -C $(KERNEL_SRC) M=$(M) modules $(KBUILD_OPTIONS)
 
