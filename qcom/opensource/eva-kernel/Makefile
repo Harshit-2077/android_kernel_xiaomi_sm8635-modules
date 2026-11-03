@@ -5,6 +5,8 @@ KBUILD_EXTRA_SYMBOLS := \
     $(M)/../synx-kernel/Module.symvers \
     $(M)/../dsp-kernel/Module.symvers
 
+KBUILD_OPTIONS += KBUILD_EXTRA_SYMBOLS="$(KBUILD_EXTRA_SYMBOLS)"
+
 all:
 	$(MAKE) -C $(KERNEL_SRC) M=$(M) modules $(KBUILD_OPTIONS)
 
