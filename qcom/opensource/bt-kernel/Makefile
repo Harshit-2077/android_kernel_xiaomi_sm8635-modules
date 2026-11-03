@@ -10,6 +10,8 @@ KBUILD_OPTIONS += CONFIG_BTFM_SLIM=m
 KBUILD_EXTRA_SYMBOLS := \
     $(M)/../securemsm-kernel/Module.symvers \
     $(M)/../wlan/platform/Module.symvers
+    
+KBUILD_OPTIONS += KBUILD_EXTRA_SYMBOLS="$(KBUILD_EXTRA_SYMBOLS)"
 
 all:
 	$(MAKE) -C $(KERNEL_SRC) M=$(M) modules $(KBUILD_OPTIONS)
