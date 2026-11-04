@@ -50,7 +50,7 @@ KBUILD_EXTRA := \
     BOARD_PLATFORM=$(BOARD_PLATFORM) \
     WLAN_CTRL_NAME=wlan
 
-KBUILD_OPTIONS += KBUILD_EXTRA_SYMBOLS="$(M)/../../../dataipa/drivers/platform/msm/Module.symvers $(M)/../../platform/Module.symvers"
+KBUILD_OPTIONS += KBUILD_EXTRA_SYMBOLS="$(M)/../../dataipa/drivers/platform/msm/Module.symvers $(M)/../platform/Module.symvers"
 
 #By default build for CLD
 WLAN_SELECT := CONFIG_QCA_CLD_WLAN=m
