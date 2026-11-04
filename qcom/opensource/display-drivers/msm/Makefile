@@ -2,10 +2,6 @@
 
 DISPLAY_SELECT := CONFIG_DRM_MSM=m
 
-KBUILD_EXTRA_SYMBOLS := \
-    $(M)/../../mm-drivers/msm_ext_display/Module.symvers \
-    $(M)/../../mm-drivers/sync_fence/Module.symvers \
-    $(M)/../../securemsm-kernel/Module.symvers
 
 ifneq ($(BOARD_PLATFORM), volcano)
 KBUILD_EXTRA_SYMBOLS += \
@@ -16,8 +12,6 @@ endif
 KBUILD_OPTIONS += DISPLAY_ROOT=$(KERNEL_SRC)/$(M)/../
 KBUILD_OPTIONS += BOARD_PLATFORM=$(TARGET_BOARD_PLATFORM)
 KBUILD_OPTIONS += $(DISPLAY_SELECT)
-KBUILD_OPTIONS += KBUILD_EXTRA_SYMBOLS="$(KBUILD_EXTRA_SYMBOLS)"
-
 all: modules
 
 modules_install:
