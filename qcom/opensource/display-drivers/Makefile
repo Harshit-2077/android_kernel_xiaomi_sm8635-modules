@@ -4,6 +4,7 @@ KBUILD_OPTIONS+= DISPLAY_ROOT=$(KERNEL_SRC)/$(M)
 KBUILD_EXTRA_SYMBOLS := \
     $(M)/../mm-drivers/msm_ext_display/Module.symvers \
     $(M)/../mm-drivers/sync_fence/Module.symvers \
+    $(M)/../mmrm-driver/Module.symvers \
     $(M)/../securemsm-kernel/Module.symvers
     
 KBUILD_OPTIONS += KBUILD_EXTRA_SYMBOLS="$(KBUILD_EXTRA_SYMBOLS)"
