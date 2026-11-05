@@ -8,6 +8,7 @@ KBUILD_EXTRA_SYMBOLS := \
     $(M)/../mm-drivers/msm_ext_display/Module.symvers \
     $(M)/../securemsm-kernel/Module.symvers
     
+KBUILD_OPTIONS+=CONFIG_DRM_MSM=y
 KBUILD_OPTIONS += KBUILD_EXTRA_SYMBOLS="$(KBUILD_EXTRA_SYMBOLS)"
 
 all:
